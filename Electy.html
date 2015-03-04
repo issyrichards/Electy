@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+		</script>
+		<script src="dist/js/bootstrap.js"></script>
+
+		<link href="dist/css/bootstrap.css" rel="stylesheet">
+		<link href="main.css" rel="stylesheet" type="text/css">
+		  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+	</head>
+	
+	<body>
+		<nav id="wholebar" class= "nav navbar navbar-default navbar-fixed-top">
+			<div class="container">
+
+				<a href="index.html" class="navbar-header"><img id="logo" class="img-responsive" src="Logo_electy.jpg"/></a>
+				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse navHeaderCollapse">
+				<ul class="nav navbar-nav navbar-right">
+				<li><a href="#about">how it works</a></li>
+				<li><a href="#action">contact</a></li>
+			</ul>
+
+				</div>
+			</div>
+		</nav>
+
+<div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="Logo.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>How do you choose who to vote for?</h1>
+              <p class="lead">Too often we get information overload running up to elections.</p>
+              <p>Electy allows you to work out which parties are focussing on issues that matter to <em>you</em></p>
+              <a class="btn btn-large btn-primary" href="#">Find your issue!</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="Education.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 id = "education">Education</h1>
+              <p>Click on the issue to find the party position</p> 
+             <ul>
+						<li><a id="uni" href="#">University fees</a></li>
+						<li><a id="free_school_meals" href="#">Free School Meals</a></li>
+			</ul>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="health.jpeg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Health</h1>
+             <p>Click on the issue to find the party position</p> 
+             <ul>
+						<li><a id="nhs" href="#">NHS</a></li>
+						<li><a id="care_homes" href="#">Care Homes</a></li>
+			</ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+
+<!--
+	<div class="jumbotron">
+		<div class="container">
+			<h1>How do you choose who to vote for?</h1>
+			<div class="row">
+				<div class="col-xs-12 col-md-7">
+					<img id="ballot_box" class="img-responsive" src=""/>
+				</div>
+				<div id="pitch" class="col-xs-12 col-md-5">
+					<p>Too often we get information overload running up to elections.</p> 
+					<p>Electy allows you to work out which parties are focussing on issues that matter to <em>you</em></p> 
+
+					<p>Scroll left or right to find issues that affect you.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="action">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-12">
+					<h2 id="calltoaction">Help people choose jobs they'll enjoy. <br /> Show them what your diary looked like last week</h2>
+					<button id="button" class="btn btn-lg">share a week</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+<div class="row">
+	<div id="iframe">
+	<div class="col-xs-12 col-md-7 instructions">
+					<ol>
+						<li>Draw a picture of a diary and fill it with what you did last week. Highlight common themes</li>
+						<li>Upload photo</li>
+						<li>In comments tell us your job title, industry, how long you've been in the job</li>
+						<li>Tag with the tasks that you spent most time doing</li>
+					</ol>
+					<p>Your diary will be displayed in the 'see the diaries section' within 24 hours. Meanwhile <a src="gallery.html"><em>explore</em></a>.</p>
+	</div> 
+	<div class="col-xs-12 col-md-5">
+		
+				<iframe id="submit" class="embed-responsive-item" src="http://issyrichards32.tumblr.com/submit" height="750" width="550"  frameborder="0" scrolling="no"></iframe>
+
+	</div>
+	</div>
+</div>
+
+
+
+<script>
+	$("#iframe").hide();
+	$("#button").on("click", function() {
+		$("#iframe").toggle("fast");
+
+	if ($("#iframe").is(':visible')) {
+     $("html, body").animate({scrollTop: $(".instructions").offset().top});
+  }
+	});
+</script>
+
+-->
+
+<script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    <script src="../assets/js/holder/holder.js"></script>
+	</body>
+</html>
