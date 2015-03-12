@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
+<head>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
 		</script>
 		<script src="dist/js/bootstrap.js"></script>
@@ -12,13 +10,15 @@
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
                     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
                                    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  		<script src="dist/js/bootstrap.js"></script>
 	</head>
 	
 	<body>
 		<nav id="wholebar" class= "nav navbar navbar-default navbar-fixed-top">
 			<div class="container">
 
-				<a href="index.html" class="navbar-header"><img id="logo" class="img-responsive" src="Logo.jpg"/></a>
+				<a href="index.html" class="navbar-header"><img id="logo" class="img-responsive" src="Logo_electy.png"/></a>
 				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -27,6 +27,7 @@
 				<div class="collapse navbar-collapse navHeaderCollapse">
 				<ul class="nav navbar-nav navbar-right">
 				<li><a href="#about">How it works</a></li>
+				<li><a href="#team">The Team</a></li>
 				<li><a href="#action">Contact Us</a></li>
 			</ul>
 
@@ -40,6 +41,7 @@
           <img src="intro.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
+           	 <img src="iphones.png" alt="">
               <h1>How do you choose who to vote for?</h1>
               <p class="lead">Too often we get information overload running up to elections.</p>
               <p>Electy allows you to work out which parties are focussing on issues that matter to <em>you</em></p>
@@ -74,9 +76,38 @@
           </div>
         </div>
       </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div><!-- /.carousel -->
+      <div class="control">
+       <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <div class="control">
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+  	<span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+</div>
+    <!-- /.carousel -->
+<div id="mypiechart" class="pie chart">
+      <div class="pie-chart">
+<img src="https://chart.googleapis.com/chart?cht=p&chd=t:40,30,30&chs=900x300&chl=Labour|Conservative|Green" id='pie'>
+<div>
+  <div class="container">
+   <div class="row">
+    <div class="col-xs-12 col-md-12">
+     <h2>Content here</h2>
+     <button id="button" class="btn btn-lg">Issue name</button>
+    </div>
+   </div>
+
+  </div>
+</div>
+<div class="row">
+ <div id="open">
+ <div class="col-xs-12">
+     <p>Content</p>
+ </div> 
+ </div>
+</div>
 
 <!--
 	<div class="jumbotron">
@@ -164,5 +195,30 @@
       }(window.jQuery)
     </script>
     <script src="../assets/js/holder/holder.js"></script>
+    <script>
+ $("#open").hide();
+ $("#button").on("click", function() {
+  $("#open").toggle("fast");
+
+ if ($("#open").is(':visible')) {
+     $("html, body").animate({scrollTop: $(".pie").offset().top});
+  }
+ });
+</script>
+<script>
+$(document).ready(function(){       
+   var scroll_start = 0;
+   var startchange = $('.nav');
+   var offset = startchange.offset();
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+          $('.nav').css('background-color', 'rgba(255,255,255,1)');
+       } else {
+          $('.nav').css('background-color', 'transparent');
+       }
+   });
+});
+</script>
 	</body>
 </html>
