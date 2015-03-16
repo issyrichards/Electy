@@ -3,21 +3,26 @@
 	/*max-width: 220px;
 	/*height: auto;
 	margin:0;*/
-	width: 100%;
+	width: 70%;
 	max-width: 300px;
-	margin: 20px 0;
+	margin: 5px 0;
 }
 
 #wholebar{
-	background-color: white;
+  background-color: transparent;
 	border-bottom-style: solid;
-	border-bottom-color:#0e1717;
+	border-bottom-color: transparent;
 	border-bottom-width: 1px;
+}
+
+.nav {
+transition-duration: 0.5s;
 }
 
 .navbar-right {
 	border-bottom-width:0px;
 	margin-top:15px;
+  font-size: 18px;
 }
 
 .navbar-toggle {
@@ -26,13 +31,12 @@
 }
 
 .collapse{
-	background-color: white;
+  border-bottom-color: black;
 	border: 10px;
-	border-bottom-color: black;
 }
 
 .jumbotron {
-	background-color: white;
+  background-color: white;
 	text-align: center;
 }
 
@@ -58,8 +62,8 @@
 .instructions {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	padding-top: 145px;
-	max-width:600px;
-	font-size:20px;
+	max-width: 600px;
+	font-size: 20px;
 	padding-left: 50px;
 	font-weight: 200;
 }
@@ -98,7 +102,7 @@ iframe {
 
 @media (max-width: 990px) {
 	.jumbotron p {
-		font-size:15px;
+		font-size: 15px;
 		}
 	}
 
@@ -126,28 +130,20 @@ iframe {
 	#skillsdropdown {
 		display:initial;
 	}
-
-@media (max-width: 768px) {
-	#calltoaction {
-		font-size: 24px;}
-		#pitch {
-			line-height: 13.1px;
-		}
-		.instructions {
-			padding-top: 60px;
-		}
 }
 
- .carousel {
+
+.carousel {
       margin-bottom: 60px;
     }
 
-    .carousel .container {
+/*
+.carousel .container {
       position: relative;
       z-index: 9;
     }
 
-    .carousel-control {
+.carousel-control {
       height: 80px;
       margin-top: 0;
       font-size: 120px;
@@ -157,10 +153,10 @@ iframe {
       z-index: 10;
     }
 
-    .carousel .item {
+.carousel .item {
       height: 500px;
     }
-    .carousel img {
+.carousel img {
       position: absolute;
       top: 0;
       left: 0;
@@ -168,25 +164,28 @@ iframe {
       height: 500px;
     }
 
-    .carousel-caption {
+.carousel-caption {
       background-color: transparent;
       position: static;
       max-width: 550px;
       padding: 0 20px;
       margin-top: 200px;
     }
-    .carousel-caption h1,
-    .carousel-caption .lead {
+.carousel-caption h1,
+.carousel-caption .lead {
       margin: 0;
       line-height: 1.25;
       color: #fff;
       text-shadow: 0 1px 1px rgba(0,0,0,.4);
     }
-    .carousel-caption .btn {
+.carousel-caption .btn {
       margin-top: 10px;
     }
+.carousel-caption img {
+      margin-bottom: 0px;
+    }
 
-    @media (max-width: 979px) {
+@media (max-width: 979px) {
 
       .container.navbar-wrapper {
         margin-bottom: 0;
@@ -204,14 +203,12 @@ iframe {
         width: auto;
         height: 500px;
       }
+    }
 
-       @media (max-width: 767px) {
+@media (max-width: 767px) {
       .carousel {
         margin-left: -20px;
         margin-right: -20px;
-      }
-      .carousel .container {
-
       }
       .carousel .item {
         height: 300px;
@@ -226,9 +223,19 @@ iframe {
       }
       .carousel-caption h1 {
         font-size: 30px;
+
       }
       .carousel-caption .lead,
       .carousel-caption .btn {
         font-size: 18px;
+      }
+    }
+*/
 
-	
+#pie {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 150px;
+        margin-bottom: 150px;
+      }

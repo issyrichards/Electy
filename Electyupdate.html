@@ -1,0 +1,149 @@
+<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+		</script>
+		<script src="dist/js/bootstrap.js"></script>
+
+    <link href="main.css" rel="stylesheet" type="text/css">
+		<link href="dist/css/bootstrap.css" rel="stylesheet">
+		  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  		<script src="dist/js/bootstrap.js"></script>
+	</head>
+	
+	<body>
+		<nav id="wholebar" class= "nav navbar navbar-default navbar-fixed-top">
+			<div class="container">
+
+				<a href="index.html" class="navbar-header"><img id="logo" class="img-responsive" src="Logo_electy.png"/></a>
+				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse navHeaderCollapse">
+				<ul class="nav navbar-nav navbar-right">
+				<li><a href="#about">How it works</a></li>
+				<li><a href="#team">The Team</a></li>
+				<li><a href="#action">Contact Us</a></li>
+			</ul>
+
+				</div>
+			</div>
+		</nav>
+
+<div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="intro.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+           	 <img src="iphones.png" alt="">
+              <h1>How do you choose who to vote for?</h1>
+              <p class="lead">Too often we get information overload running up to elections.</p>
+              <p>Electy allows you to work out which parties are focussing on issues that matter to <em>you</em></p>
+              <a class="btn btn-large btn-primary" href="#">Find your issue!</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="Education.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 id = "education">Education</h1>
+              <p>Click on the issue to find the party position</p> 
+             <ul>
+						<li><a id="uni" class="openers" href="#">University fees</a></li>
+						<li><a id="free_school_meals" class="openers" href="#">Free School Meals</a></li>
+			</ul>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="health.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Health</h1>
+             <p>Click on the issue to find the party position</p> 
+             <ul>
+						<li><a id="nhs" class="openers" href="#">NHS</a></li>
+						<li><a id="care_homes" class="openers" href="#">Care Homes</a></li>
+			</ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="control">
+       <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <div class="control">
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+  	<span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+</div>
+</div>
+    <!-- /.carousel -->
+
+<div id="open" class="row">
+    <div class="col-xs-12>">
+      <img src="https://chart.googleapis.com/chart?cht=p&amp;chd=t:40,30,30&amp;chs=900x300&amp;chl=Labour|Conservative|Green" id='pie'>
+    </div>
+</div>
+
+<script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    <script src="../assets/js/holder/holder.js"></script>
+
+<script>
+ $("#open").hide();
+ $(".openers").on("click", function() {
+  $("#open").toggle("fast");
+
+ if ($("#open").is(':visible')) {
+     $("html, body").animate({scrollTop: $("#pie").offset().top});
+  }
+ });
+</script>
+
+
+<script>
+$(document).ready(function(){       
+   var scroll_start = 0;
+   var startchange = $('.nav');
+   var offset = startchange.offset();
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+          $('.nav').css('background-color', 'rgba(255,255,255,1)');
+       } else {
+          $('.nav').css('background-color', 'transparent');
+       }
+   });
+});
+</script>
+	</body>
+</html>
