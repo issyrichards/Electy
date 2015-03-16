@@ -181,11 +181,18 @@ iframe {
 .carousel-caption .btn {
       margin-top: 10px;
     }
+<<<<<<< HEAD
 .carousel-caption img {
       margin-bottom: 0px;
     }
 
 @media (max-width: 979px) {
+=======
+    .carousel-caption img {
+      margin-bottom: 0px;
+    }
+    @media (max-width: 979px) {
+>>>>>>> 3618c930a2dfe3d5acbf5f0c6b3e9d443b3a1beb
 
       .container.navbar-wrapper {
         margin-bottom: 0;
@@ -229,6 +236,7 @@ iframe {
       .carousel-caption .btn {
         font-size: 18px;
       }
+<<<<<<< HEAD
     }
 */
 
@@ -239,3 +247,5 @@ iframe {
         margin-top: 150px;
         margin-bottom: 150px;
       }
+=======
+>>>>>>> 3618c930a2dfe3d5acbf5f0c6b3e9d443b3a1beb
