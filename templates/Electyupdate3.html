@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+		</script>
+		<script src="{{ url_for('static', filename='dist/js/bootstrap.js') }}"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='dist/js/bootstrap.js') }}"></script>
+
+    <link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet" type="text/css"/>
+		<link href="{{ url_for('static', filename='dist/css/bootstrap.css') }}" rel="stylesheet"/>
+	</head>
+	
+	<body>
+		<nav id="wholebar" class= "nav navbar navbar-default navbar-fixed-top navbar-absolute">
+			<div class="container">
+
+				<a href="Electyupdate3.html" class="navbar-header"><img id="logo" class="img-responsive" src="{{ url_for('static', filename='Logo_electy.png') }}"/></a>
+				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse navHeaderCollapse">
+				<ul class="nav navbar-nav navbar-right">
+				<li><a href="#about">How it works</a></li>
+				<li><a href="#team">The Team</a></li>
+				<li><a href="#action">Contact Us</a></li>
+			</ul>
+
+				</div>
+			</div>
+		</nav>
+
+<div class="jumbotron">
+  <video class="video" controls="none" loop="loop" autoplay="autoplay" style="left: 0px;">
+    <source type="video/webm" src="http://www.yoobic.com/wp-content/themes/ubiq/assets/UBIQ.webm">
+    <source type="video/mp4" src="http://www.yoobic.com/wp-content/themes/ubiq/assets/UBIQ.mp4">
+  </video>
+      <div class="overlay">
+         <div class="col-xs-12 col-md-5">
+              <img src="{{ url_for('static', filename='iphones.png') }}" class="img-responsive" alt="">
+         </div>
+         <div id="pitch" class="col-cs-12 col-md-7">
+              <h1>How do you choose who to vote for?</h1>
+              <p>Too often we get information overload running up to elections.</p>
+              <p>Electy allows you to work out which parties are focussing on issues that matter to <em>you</em></p>
+              <a id="findbtn" class="btn btn-large btn-primary" href="#">Find your issue!</a>
+        </div>
+      </div>
+ </div>
+
+<div class="container">
+<div id="issuesection">
+<div class="row">
+    <div id="issueheader" class="col-xs-12">
+      <h1>Select your issue</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 issue_choice">
+      <h1>Education</h1>
+      <ul>
+        <li><a class="openers" href="http://localhost:5000/University_Fees">University Fees</a></li>
+        <li><a class="openers" href="http://localhost:5000/Nurses">Free School Meals</a></li>
+        <li><a class="openers" href="http://localhost:5000/Student_Loans">Student Loan</a></li>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-md-6 issue_choice"><h1>Healthcare</h1>
+      <ul>
+        <li><a class="openers" href="http://localhost:5000/NHS">NHS</a></li>
+        <li><a class="openers" href="http://localhost:5000/Nurses">Nurses</a></li>
+        <li><a class="openers" href="http://localhost:5000/Care_homes">Care homes</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+{% if issue %}
+<div id="open" class="row">
+    <div class="col-xs-12 col-md-7">
+      <img src="https://chart.googleapis.com/chart?cht=p&amp;chd=t:{{ labour_proportion }},{{ conservative_proportion }},{{ libdem_proportion }},{{ UKIP_proportion }}&amp;chs=900x300&amp;chl=Labour|Conservative|Lib Dem|UKIP" id="pie">
+    </div>
+    <div id="buttoncolumn" class="col-xs-12 col-md-5">
+    <a id="contentbtn" class="btn btn-large btn-primary" href="#">Find out what they're saying</a>
+    </div>
+</div>
+
+<div id="streamingsection" class="container">
+  <div class="row">
+      <div class="col-xs-12 col-md-3">
+        <h2>Labour</h2>
+        <p class="party"></p>
+        <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=NHS%20from%3AUKLabour" data-widget-id="578979837307654145">Tweets about NHS from:UKLabour</a>
+      </div>
+      <div class="col-xs-12 col-md-3">
+        <h2>Conservatives</h2>
+        <p class="party"></p>
+      </div>
+      <div class="col-xs-12 col-md-3">
+        <h2>Lib Dems</h2>
+        <p class="party"></p>
+      </div>
+      <div class="col-xs-12 col-md-3">
+        <h2>UKIP</h2>
+        <p class="party"></p>
+      </div>
+  </div>
+</div>
+
+<script>
+ $("#open").hide();
+ $(".openers").on("click", function() {
+  $("#open").toggle("fast");
+
+ if ($("#open").is(':visible')) {
+     $("html, body").animate({scrollTop: $("#pie").offset().top});
+  }
+ });
+</script>
+
+<script>
+ $("#streamingsection").hide();
+ $("#contentbtn").on("click", function() {
+  $("#streamingsection").toggle("fast");
+
+ if ($("#streamingsection").is(':visible')) {
+     $("html, body").animate({scrollTop: $("#streamingsection").offset().top});
+  }
+ });
+</script>
+
+{% else %}
+
+{% endif %}
+
+<script>
+ $("#issuesection").hide();
+ $("#findbtn").on("click", function() {
+  $("#issuesection").toggle("fast");
+
+ if ($("#issuesection").is(':visible')) {
+     $("html, body").animate({scrollTop: $("#issuesection").offset().top});
+  }
+ });
+</script>
+
+<script>
+$(document).ready(function(){       
+   var scroll_start = 0;
+   var startchange = $('#wholebar');
+   var offset = startchange.offset();
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+          $('#wholebar').css('background-color', 'rgba(255,255,255,1)');
+       } else {
+          $('#wholebar').css('background-color', 'transparent');
+       }
+   });
+});
+</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+	</body>
+</html>
