@@ -221,5 +221,12 @@ iframe {
 	}
 }
 
+#page_footer {
+	text-align: center;
+	background: rgba(66,139,202,1);
+	padding-top: 25px;
+	color: white;
+	font-size: 15px;
+}
 
 

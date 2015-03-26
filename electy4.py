@@ -51,7 +51,7 @@ def get_UKIP_tweets(issue):
 def get_total_tweets(issue):
 	total_tweets = get_labour_tweets(issue.replace('_',' ')) + get_conservative_tweets(issue) + get_libdem_tweets(issue) + get_UKIP_tweets(issue)
 	print 'Total tweets:', total_tweets
-	return total_tweets
+	return total_tweets or 1
 
 def get_labour_proportion(issue):
 	labour_proportion = float(get_labour_tweets(issue))/float(get_total_tweets(issue))*100

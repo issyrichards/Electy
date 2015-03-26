@@ -10,6 +10,8 @@
 
     <link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet" type="text/css"/>
 		<link href="{{ url_for('static', filename='dist/css/bootstrap.css') }}" rel="stylesheet"/>
+        <link rel="shortcut icon" type="image/png" href="http://i.imgur.com/txhtRuV.png" title="source: imgur.com" /></a>
+    <title>Electy</title>
 	</head>
 	
 	<body>
@@ -24,11 +26,6 @@
 				</button>
 				<div class="collapse navbar-collapse navHeaderCollapse">
 				<ul class="nav navbar-nav navbar-right">
-				<li><a href="#about">How it works</a></li>
-				<li><a href="#team">The Team</a></li>
-				<li><a href="#action">Contact Us</a></li>
-			</ul>
-
 				</div>
 			</div>
 		</nav>
@@ -56,26 +53,11 @@
 <div class="row">
     <div id="issueheader" class="col-xs-12">
       <h1>Select your issue</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-md-6 issue_choice">
-      <h1>Education</h1>
-      <ul>
-        <li><a class="openers" href="http://localhost:5000/University_Fees">University Fees</a></li>
-        <li><a class="openers" href="http://localhost:5000/Nurses">Free School Meals</a></li>
-        <li><a class="openers" href="http://localhost:5000/Student_Loans">Student Loan</a></li>
-      </ul>
-    </div>
-    <div class="col-xs-12 col-md-6 issue_choice"><h1>Healthcare</h1>
-      <ul>
+        <li><a class="openers" href="http://localhost:5000/Education">Education</a></li>
         <li><a class="openers" href="http://localhost:5000/NHS">NHS</a></li>
-        <li><a class="openers" href="http://localhost:5000/Nurses">Nurses</a></li>
-        <li><a class="openers" href="http://localhost:5000/Care_homes">Care homes</a></li>
-      </ul>
+        <li><a class="openers" href="http://localhost:5000/Tax">Tax</a></li>
     </div>
   </div>
-</div>
 </div>
 
 {% if issue %}
@@ -90,6 +72,7 @@
 
 <div id="streamingsection" class="container">
   <div class="row">
+      {% if issue == "NHS" %}
       <div class="col-xs-12 col-md-3">
         <h2>Labour</h2>
         <p class="party"></p>
@@ -98,18 +81,82 @@
       <div class="col-xs-12 col-md-3">
         <h2>Conservatives</h2>
         <p class="party"></p>
+        <a class="twitter-timeline" href="https://twitter.com/search?q=from%3AConservatives%20NHS" data-widget-id="580828586980020225">Tweets about from:Conservatives NHS</a>
       </div>
       <div class="col-xs-12 col-md-3">
         <h2>Lib Dems</h2>
         <p class="party"></p>
+        <a class="twitter-timeline" href="https://twitter.com/search?q=from%3ALibDems" data-widget-id="580829082289590272">Tweets about from:LibDems</a>
       </div>
       <div class="col-xs-12 col-md-3">
         <h2>UKIP</h2>
         <p class="party"></p>
+        <a class="twitter-timeline" href="https://twitter.com/search?q=from%3AUKIP%20NHS" data-widget-id="580828880963035136">Tweets about from:UKIP NHS</a>
       </div>
+      {% elif issue == "Tax" %}
+      <div class="col-xs-12 col-md-3">
+        <h2>Labour</h2>
+        <p class="party"></p>
+        <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=from%3AUKLabour%20Tax" data-widget-id="580829860156870656">Tweets about from:UKLabour Tax</a>
+      </div>
+        <div class="col-xs-12 col-md-3">
+        <h2>Conservatives</h2>
+        <p class="party"></p>
+        <a class="twitter-timeline" href="https://twitter.com/search?q=From%3AConservatives%20Tax" data-widget-id="580828160352235520">Tweets about From:Conservatives Tax</a>
+      </div>
+      <div class="col-xs-12 col-md-3">
+        <h2>Lib Dems</h2>
+        <p class="party"></p>
+        <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=from%3ALibDems%20Tax" data-widget-id="580828943323922433">Tweets about from:LibDems Tax</a>
+      </div>
+        <div class="col-xs-12 col-md-3">
+        <h2>UKIP</h2>
+        <p class="party"></p>
+        <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=from%3AUKIP%20Tax" data-widget-id="580829241123708928">Tweets about from:UKIP Tax</a>
+      </div>
+      {% elif issue == "Education" %}
+      <div class="col-xs-12 col-md-3">
+        <h2>Labour</h2>
+        <p class="party"></p>
+        <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=from%3AUKLabour%20Education" data-widget-id="580831136357679104">Tweets about from:UKLabour Education</a>
+      </div>
+        <div class="col-xs-12 col-md-3">
+        <h2>Conservatives</h2>
+        <p class="party"></p>
+        <a class="twitter-timeline" href="https://twitter.com/search?q=from%3AConservatives%20Education" data-widget-id="580832325405155328">Tweets about from:Conservatives Education</a>
+      </div>
+      <div class="col-xs-12 col-md-3">
+        <h2>Lib Dems</h2>
+        <p class="party"></p>
+        <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=from%3ALibDems%20Education" data-widget-id="580830646408445952">Tweets about from:LibDems Education</a>
+      </div>
+        <div class="col-xs-12 col-md-3">
+        <h2>UKIP</h2>
+        <a class="twitter-timeline" href="https://twitter.com/search?q=from%3AUKIP%20Education" data-widget-id="580831740459114496">Tweets about from:UKIP Education</a>
+      </div>
+      {% endif %}
   </div>
 </div>
-
+<!-- !Footer -->
+      <footer id="page_footer">
+      <div id="register" class="group">
+        <div class="split">
+          <!-- !Begin MailChimp Signup Form -->
+            <form action="//rookiefair.us6.list-manage.com/subscribe/post?u=8f064a724f9590239b19c1902&amp;id=f5212aa44d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <label for="mce-EMAIL">Let us mail you your results! Sign up here: </label> 
+              <input type="text" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn">
+              <div id="mce-responses">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>
+            </form>
+        </div>
+        <div id="social_links" class="split">
+          <a href="http://twitter.com/electy/" title="@electy" id="twitter" class="social">Follow @electy</a>
+          <a href="http://www.facebook.com/pages/Electy" title="become a fan on facebook" id="facebook" class="social facebook">Become a fan</a>
+        </div><!-- /social_links -->
+      </div>
+      </footer><!-- /footer -->   
 <script>
  $("#open").hide();
  $(".openers").on("click", function() {
@@ -155,7 +202,7 @@ $(document).ready(function(){
    $(document).scroll(function() { 
       scroll_start = $(this).scrollTop();
       if(scroll_start > offset.top) {
-          $('#wholebar').css('background-color', 'rgba(255,255,255,1)');
+          $('#wholebar').css('background-color', 'rgba(66,139,202,1)');
        } else {
           $('#wholebar').css('background-color', 'transparent');
        }
